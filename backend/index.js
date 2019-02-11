@@ -1,10 +1,9 @@
-const Generation = require("./generation");
+const GenerationEngine = require("./engine");
 
-const generation = new Generation();
+const engine = new GenerationEngine();
 
-console.log("generation", generation);
+engine.start();
 
-const nono = generation.newDragon();
-
-console.log("nono", nono);
-
+setTimeout(() => {
+  engine.stop();
+}, 20000);
